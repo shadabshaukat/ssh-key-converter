@@ -1,4 +1,4 @@
-# ssh-key-converter
+# SSH Key Converter
 Simple SSH Key Converter Script
 
 ## Requirements :
