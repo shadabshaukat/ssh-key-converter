@@ -10,19 +10,19 @@ This script should work on any Unix-like system with bash and puttygen installed
 
 ## Features :
 
-    Robust error handling: Checks for dependencies, validates inputs, and handles errors gracefully.
+    [1] Robust error handling: Checks for dependencies, validates inputs, and handles errors gracefully.
 
-    Flexible input/output: Can accept custom output filenames or generate them automatically.
+    [2] Flexible input/output: Can accept custom output filenames or generate them automatically.
 
-    Supports both key types: Handles both private and public key conversions.
+    [3] Supports both key types: Handles both private and public key conversions.
 
-    Verbose mode: Provides detailed output when requested.
+    [4] Verbose mode: Provides detailed output when requested.
 
-    Safety checks: Asks before overwriting existing files.
+    [5] Safety checks: Asks before overwriting existing files.
 
-    Help system: Comprehensive help information with examples.
+    [6]  Help system: Comprehensive help information with examples.
 
-    Proper permissions: Sets appropriate file permissions on output files.
+    [7]  Proper permissions: Sets appropriate file permissions on output files.
 
 
 ## Usage Examples :
