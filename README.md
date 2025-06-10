@@ -5,6 +5,10 @@ Simple SSH Key Converter Script
 
 The script requires puttygen which is part of the putty-tools package on most Linux distributions. On macOS, it can be installed via Homebrew.
 
+- On Debian/Ubuntu systems, install with: sudo apt-get install putty-tools
+- On RHEL/CentOS systems, install with: sudo yum install putty
+- On macOS, install with: brew install putty
+
 This script should work on any Unix-like system with bash and puttygen installed.
 
 
