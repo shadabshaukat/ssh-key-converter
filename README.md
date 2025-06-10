@@ -5,28 +5,11 @@ Simple SSH Key Converter Script
 
 The script requires puttygen which is part of the putty-tools package on most Linux distributions. On macOS, it can be installed via Homebrew.
 
-- On Debian/Ubuntu systems, install with: sudo apt-get install putty-tools
-- On RHEL/CentOS systems, install with: sudo yum install putty
-- On macOS, install with: brew install putty
+- On Debian/Ubuntu systems, install with: ```sudo apt-get install putty-tools```
+- On RHEL/CentOS systems, install with: ```sudo yum install putty```
+- On macOS, install with: ```brew install putty```
 
 This script should work on any Unix-like system with bash and puttygen installed.
-
-
-## Features :
-
-    [1] Robust error handling: Checks for dependencies, validates inputs, and handles errors gracefully.
-
-    [2] Flexible input/output: Can accept custom output filenames or generate them automatically.
-
-    [3] Supports both key types: Handles both private and public key conversions.
-
-    [4] Verbose mode: Provides detailed output when requested.
-
-    [5] Safety checks: Asks before overwriting existing files.
-
-    [6]  Help system: Comprehensive help information with examples.
-
-    [7]  Proper permissions: Sets appropriate file permissions on output files.
 
 
 ## Usage Examples :
@@ -50,3 +33,20 @@ Verbose output:
 ```
 ./ssh_key_converter.sh -v -t public -f putty key.ppk
 ```
+
+
+## Features :
+
+- Robust error handling: Checks for dependencies, validates inputs, and handles errors gracefully.
+
+- Flexible input/output: Can accept custom output filenames or generate them automatically.
+
+- Supports both key types: Handles both private and public key conversions.
+
+- Verbose mode: Provides detailed output when requested.
+
+- Safety checks: Asks before overwriting existing files.
+
+- Help system: Comprehensive help information with examples.
+
+- Proper permissions: Sets appropriate file permissions on output files.
