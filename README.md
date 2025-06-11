@@ -13,33 +13,64 @@ This script should work on any Unix-like system with bash and puttygen installed
 
 
 ## Usage Examples :
+
+### Generate a OpenSSH keygen pair:
+```
+$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/shadab/.ssh/id_ed25519): SampleOpenSSH.priv
+Enter passphrase for "SampleOpenSSH.priv" (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in SampleOpenSSH.priv
+Your public key has been saved in SampleOpenSSH.priv.pub
+The key fingerprint is:
+SHA256:QA9uBv5uK5V4s1fa2r55HqNF/N8UxXMYkMpluCzUDQc shadab@Shadabs-MacBook-Pro.local
+The key's randomart image is:
++--[ED25519 256]--+
+|    . o  .E=oo.  |
+|   . + o. o.=  + |
+|    . =..o =  ..+|
+|     + .. =.    +|
+|     ...S.  o  . |
+|    ..=   .. .  .|
+|     ooo +  + . .|
+|    ....o..+.o o.|
+|     ....o*+.   o|
++----[SHA256]-----+
+
+$ mv SampleOpenSSH.priv.pub SampleOpenSSH.pub
+```
+
+### Check the Help Commands
 ```
 ./ssh_key_converter.sh --help
 ```
-Error: puttygen is not installed.
 
-On Debian/Ubuntu systems, install with: sudo apt-get install putty-tools
-
-On RHEL/CentOS systems, install with: sudo yum install putty
-
-On macOS, install with: brew install putty
-
-Convert OpenSSH private key to PuTTY format:
+[1] Convert OpenSSH private key to PuTTY format:
 ```
-./ssh_key_converter.sh -t private -f openssh ~/.ssh/id_rsa
+./ssh_key_converter.sh -t private -f openssh SampleOpenSSH.priv -o SamplePutty.ppk
 ```
+SampleOpenSSH is the private key in OpenSSH format
+SamplePutty.priv is the private key output in Putty format
 
-Convert PuTTY public key to OpenSSH format:
+[2] Convert OpenSSH public key to PuTTY format:
 ```
-./ssh_key_converter.sh -t public -f putty key.ppk
+./ssh_key_converter.sh -t public -f openssh SampleOpenSSH.pub -o SamplePutty.pub
 ```
 
-Convert with custom output filename:
+[3] Convert PuTTY private key to OpenSSH format:
 ```
-./ssh_key_converter.sh -t private -f openssh -o mykey.ppk ~/.ssh/id_rsa
+./ssh_key_converter.sh -t private -f putty  SamplePutty.ppk -o SampleOpenSSH-New.priv
+```
+SampleOpenSSH is the private key in OpenSSH format
+SamplePutty.priv is the private key output in Putty format
+
+[4] Convert PuTTY public key to OpenSSH format:
+```
+./ssh_key_converter.sh -t public -f putty SamplePutty.pub -o SampleOpenSSH-New.pub
 ```
 
-Verbose output:
+[5] Verbose output:
 ```
 ./ssh_key_converter.sh -v -t public -f putty key.ppk
 ```
