@@ -46,31 +46,47 @@ $ mv SampleOpenSSH.priv.pub SampleOpenSSH.pub
 ./ssh_key_converter.sh --help
 ```
 
-[1] Convert OpenSSH private key to PuTTY format:
+#### [1] Convert OpenSSH private key to PuTTY format
 ```
 ./ssh_key_converter.sh -t private -f openssh SampleOpenSSH.priv -o SamplePutty.ppk
 ```
-SampleOpenSSH is the private key in OpenSSH format
-SamplePutty.priv is the private key output in Putty format
 
-[2] Convert OpenSSH public key to PuTTY format:
+```SampleOpenSSH.priv``` is the private key in OpenSSH format
+
+```SamplePutty.ppk``` is the private key output in PuTTY format
+
+
+#### [2] Convert OpenSSH public key to PuTTY format
 ```
 ./ssh_key_converter.sh -t public -f openssh SampleOpenSSH.pub -o SamplePutty.pub
 ```
 
-[3] Convert PuTTY private key to OpenSSH format:
+```SampleOpenSSH.pub ``` is the public key in OpenSSH format
+
+```SamplePutty.pub``` is the public key output in PuTTY format
+
+
+#### [3] Convert PuTTY private key to OpenSSH format
 ```
 ./ssh_key_converter.sh -t private -f putty  SamplePutty.ppk -o SampleOpenSSH-New.priv
 ```
-SampleOpenSSH is the private key in OpenSSH format
-SamplePutty.priv is the private key output in Putty format
 
-[4] Convert PuTTY public key to OpenSSH format:
+```SamplePutty.ppk`` is the private key in PuTTY format
+
+```SampleOpenSSH-New.priv``` is the private key output in OpenSSH format
+
+
+#### [4] Convert PuTTY public key to OpenSSH format
 ```
 ./ssh_key_converter.sh -t public -f putty SamplePutty.pub -o SampleOpenSSH-New.pub
 ```
 
-[5] Verbose output:
+```SamplePutty.pub``` is the public key in PuTTY format
+
+```SampleOpenSSH-New.pub``` is the public key output in OpenSSH format
+
+
+#### [5] Verbose output
 ```
 ./ssh_key_converter.sh -v -t public -f putty key.ppk
 ```
