@@ -13,6 +13,13 @@ This script should work on any Unix-like system with bash and puttygen installed
 
 
 ## Usage Examples :
+```
+./ssh_key_converter.sh --help
+```
+Error: puttygen is not installed.
+On Debian/Ubuntu systems, install with: sudo apt-get install putty-tools
+On RHEL/CentOS systems, install with: sudo yum install putty
+On macOS, install with: brew install putty
 
 Convert OpenSSH private key to PuTTY format:
 ```
