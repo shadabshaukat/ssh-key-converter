@@ -71,7 +71,7 @@ $ mv SampleOpenSSH.priv.pub SampleOpenSSH.pub
 ./ssh_key_converter.sh -t private -f putty  SamplePutty.ppk -o SampleOpenSSH-New.priv
 ```
 
-```SamplePutty.ppk`` is the private key in PuTTY format
+```SamplePutty.ppk``` is the private key in PuTTY format
 
 ```SampleOpenSSH-New.priv``` is the private key output in OpenSSH format
 
